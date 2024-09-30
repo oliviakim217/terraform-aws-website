@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "s3bucket"{
 resource "aws_s3_bucket_ownership_controls" "ownership" {
     bucket = aws_s3_bucket.s3bucket.id
     rule{
-        object_ownership = "BucketOwnerPreferred"
+        object_ownership = "ObjectWriter"
     }
 
 }
