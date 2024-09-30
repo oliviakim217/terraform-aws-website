@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Oops! Page Not Found</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 6rem;
+            margin-bottom: 10px;
+            color: #ff6b6b;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #666;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        a {
+            font-size: 1rem;
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 2.5s ease-in-out forwards;
+        }
+
+        a:hover {
+            background-color: #000;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            color: #999;
+            opacity: 0;
+            animation: fadeIn 3s ease-in forwards;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>404</h1>
+        <p>Oops! The page you’re looking for doesn’t exist.</p>
+        <a href="/">Go Back Home</a>
+    </div>
+
+    <footer>
+        &copy; 2024 Minimalist Design. All rights reserved.
+    </footer>
+
+</body>
+</html>
