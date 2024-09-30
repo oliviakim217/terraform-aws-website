@@ -41,7 +41,7 @@ resource "aws_s3_bucket_website_configuration" "website_config" {
     }
 }
 
-resource "aws_s3_object" "upload-index.html" {
+resource "aws_s3_object" "upload-index-html" {
     bucket = aws_s3_bucket.s3bucket.id
     key = "index.html"
     source = "index.html"
@@ -49,7 +49,7 @@ resource "aws_s3_object" "upload-index.html" {
     content_type = "text/html"
 }
 
-resource "aws_s3_object" "upload-error.html" {
+resource "aws_s3_object" "upload-error-html" {
     bucket = aws_s3_bucket.s3bucket.id
     key = "error.html"
     source = "error.html"
@@ -57,3 +57,13 @@ resource "aws_s3_object" "upload-error.html" {
     content_type = "text/html"
 }
 
+resource "aws_s3_bucket_website_configuration" "website" {
+    bucket = aws_s3_bucket.s3bucket.id
+    index_document {
+      suffix = "index.html"
+    }
+    error_document {
+      key = "error.html"
+    }
+    depends_on = [ aws_s3_bucket_acl.acl ]
+}
